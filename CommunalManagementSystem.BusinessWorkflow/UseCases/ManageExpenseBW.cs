@@ -59,5 +59,16 @@ namespace CommunalManagementSystem.BusinessWorkflow.UseCases
 
             return await _manageExpenseDA.UpdateAsync(id, updatedExpense);
         }
+
+        public async Task<decimal> GetTotalExpensesAsync()
+        {
+            return await _manageExpenseDA.GetTotalExpensesAsync();
+        }
+
+        public async Task<decimal> GetTotalForLast3MonthsAsync()
+        {
+            return await _manageExpenseDA.GetTotalForLast3MonthsAsync();
+        }
+
     }
 }
